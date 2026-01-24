@@ -1,7 +1,7 @@
 @import url('amulya.css');
 
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 0;
     margin: 0;
     line-height: 1.5;
@@ -19,4 +19,30 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+.wrapper > * {
+  outline: 1px red solid;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+nav {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+aside {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3
 }
