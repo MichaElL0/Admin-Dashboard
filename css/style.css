@@ -28,13 +28,23 @@ p, h1, h2, h3, h4, h5, h6 {
 .wrapper {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.1fr 5fr;
+  grid-template-columns: minmax(220px, 1fr) 4fr;
   grid-template-rows: 1fr 4fr;
 }
 
 nav {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+
+  padding: 1rem 2.2rem;
+}
+
+nav > * {
+  outline: 1px purple solid;
 }
 
 main {
@@ -61,4 +71,49 @@ aside {
   align-items: center;
   gap: 0.9rem;
   padding: 0.6rem 0;
+}
+
+.search {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.search input {
+  width: 70%;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(212, 212, 212);
+}
+
+.profile-section {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.profile-info {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.project-buttons {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 }
