@@ -1,11 +1,11 @@
 @import url('amulya.css');
 
 * {
-    /* box-sizing: border-box; */
-    padding: 0;
-    margin: 0;
-    line-height: 1.5;
-    font-family: 'Amulya-Regular', Courier, monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Amulya-Regular', Courier, monospace;
 }
 
 img, picture, video, canvas, svg {
@@ -29,7 +29,7 @@ p, h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(220px, 1fr) 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: min-content 4fr;
 }
 
 nav {
@@ -41,6 +41,7 @@ nav {
   grid-template-rows: auto auto;
 
   padding: 1rem 2.2rem;
+  height: 150px;
 }
 
 nav > * {
@@ -50,6 +51,15 @@ nav > * {
 main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  padding: 1rem 2.2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+main > * {
+  outline: 1px green solid;
 }
 
 aside {
@@ -116,4 +126,24 @@ aside {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+.announcements {
+  display: grid;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  padding: 1.5rem;
+}
+
+.trending {
+  display: grid;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  padding: 1.5rem;
+}
+
+.projects {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  padding: 1.5rem;
 }
