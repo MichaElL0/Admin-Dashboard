@@ -28,7 +28,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .wrapper {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) 4fr;
+  grid-template-columns: minmax(220px, 0.9fr) 4fr;
   grid-template-rows: min-content 4fr;
 }
 
@@ -52,7 +52,7 @@ main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 
-  padding: 1rem 2.2rem;
+  padding: 1rem 2.2rem 2.5rem 2.2rem;
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 1fr;
   grid-template-rows: repeat(auto-fit, 1fr);
@@ -72,7 +72,7 @@ aside {
 .logo {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
   padding-top: 1rem;
 }
 
@@ -108,9 +108,13 @@ aside {
   grid-row: 1 / 2;
 }
 
+.profile-section h3 {
+  font-size: 1em;
+}
+
 .profile-info {
   display: flex;
-  gap: 25px;
+  gap: 2rem;
   align-items: center;
 
   grid-column: 1 / 2;
@@ -132,7 +136,18 @@ aside {
   display: grid;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  padding: 1.5rem;
+  padding: 1.7rem;
+  gap: 1rem;
+}
+
+.announcements h3, 
+.announcements h4 {
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+.announce-info {
+  font-size: 14px;
 }
 
 .trending {
@@ -140,10 +155,22 @@ aside {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
   padding: 1.5rem;
+  gap: 1rem;
 }
 
 .projects {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   padding: 1.5rem;
+}
+
+.trending-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.93em;
+}
+
+.announce-info:nth-child(-n + 3) {
+  border-bottom: 1px solid gray;
 }
