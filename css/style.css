@@ -1,5 +1,13 @@
 @import url('amulya.css');
 
+:root {
+  --main-blue: #1992d4;
+  --main-yellow: #f0b42a;
+  --main-gray: #969696;
+  --main-white: #fbfdfe;
+  --main-offwhite: #e3e8f0;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -42,6 +50,7 @@ nav {
 
   padding: 1rem 2.2rem;
   height: 150px;
+  background-color: var(--main-white);
 }
 
 nav > * {
@@ -56,6 +65,12 @@ main {
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 1fr;
   grid-template-rows: repeat(auto-fit, 1fr);
+
+  background-color: var(--main-offwhite);
+}
+
+main p {
+  color: var(--main-gray);
 }
 
 main > * {
@@ -67,6 +82,8 @@ aside {
   grid-row: 1 / 3;
 
   padding-left: 1.3rem;
+  background-color: var(--main-blue);
+  color: var(--main-white);
 }
 
 .logo {
@@ -96,7 +113,7 @@ aside {
   width: 70%;
   border-radius: 15px;
   border: none;
-  background-color: rgb(212, 212, 212);
+  background-color: var(--main-offwhite);
 }
 
 .profile-section {
@@ -148,6 +165,11 @@ aside {
 
 .announce-info {
   font-size: 14px;
+  padding-bottom: 1rem; /*This pushes down a site so it has scrollbar*/
+}
+
+.announce-info:last-child {
+  padding-bottom: 0;
 }
 
 .trending {
@@ -162,6 +184,10 @@ aside {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   padding: 1.5rem;
+}
+
+.project-tile {
+  background-color: var(--main-white);
 }
 
 .trending-tile {
