@@ -200,3 +200,25 @@ aside {
 .announce-info:nth-child(-n + 3) {
   border-bottom: 1px solid gray;
 }
+
+aside img[src$=".svg"] {
+    filter: brightness(0) invert(1);
+}
+
+.project-tile > button:nth-of-type(1) {
+  background-image: url(/svgs/star-plus-outline.svg);
+  width: 28px;
+  height: 28px;
+}
+
+.project-tile > button:nth-of-type(2) {
+  background-image: url(/svgs/eye-plus-outline.svg);
+  width: 28px;
+  height: 28px;
+}
+
+.project-tile > button:nth-of-type(3) {
+  background-image: url(/svgs/share-variant-outline.svg);
+  width: 28px;
+  height: 28px;
+}
