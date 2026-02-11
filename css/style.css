@@ -29,15 +29,11 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.wrapper > * {
-  outline: 1px red solid;
-}
-
 .wrapper {
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(220px, 0.9fr) 4fr;
-  grid-template-rows: min-content 4fr;
+  grid-template-rows: minmax(160px, auto) 4fr;
 }
 
 nav {
@@ -49,12 +45,13 @@ nav {
   grid-template-rows: auto auto;
 
   padding: 1rem 2.2rem;
-  height: 150px;
+  /* height: 150px; */
   background-color: var(--main-white);
-}
+  gap: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-nav > * {
-  outline: 1px purple solid;
+  position: relative;
+  z-index: 1;
 }
 
 main {
@@ -71,10 +68,6 @@ main {
 
 main p {
   color: var(--main-gray);
-}
-
-main > * {
-  outline: 1px green solid;
 }
 
 aside {
@@ -110,7 +103,7 @@ aside {
 }
 
 .search input {
-  width: 70%;
+  width: 90%;
   border-radius: 15px;
   border: none;
   background-color: var(--main-offwhite);
@@ -120,13 +113,21 @@ aside {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  justify-content: end;
+  padding-right: 2rem;
 
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 
+.profile-section img[src="images/Vaporewave Logo.png"] {
+  width: 40px;
+  border-radius: 100px;
+}
+
 .profile-section h3 {
-  font-size: 1em;
+  font-size: 1.1em;
+  font-family: 'Amulya-Bold', Courier, monospace;
 }
 
 .profile-info {
@@ -136,6 +137,16 @@ aside {
 
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+}
+
+.profile-info-wrapper {
+  font-family: 'Amulya-Bold', Courier, monospace;
+  font-weight: 900;
+}
+
+.profile-info img[src="images/Vaporewave Logo.png"] {
+  width: 64px;
+  border-radius: 100px;
 }
 
 .project-buttons {
@@ -148,6 +159,21 @@ aside {
   justify-content: center;
   gap: 1.5rem;
 }
+
+.project-buttons button {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  border-radius: 25px;
+  border-style: none;
+  flex: 1;
+}
+
+.project-buttons button:hover {
+  background-color: #157ab1;
+  font-size: 1.1rem;
+}
+
 
 .announcements {
   display: grid;
@@ -186,9 +212,14 @@ aside {
   padding: 1.5rem;
 }
 
+.projects h3 {
+  padding-bottom: 0.8rem;
+}
+
 .project-tile {
   background-color: var(--main-white);
-  outline: 1px solid pink;
+  border-radius: 12px;
+  padding: 2rem;
 }
 
 .trending-tile {
